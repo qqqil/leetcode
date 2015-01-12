@@ -1,5 +1,7 @@
 #include <iostream>
+#include <list>
 #include <stack>
+#include <stdio.h>
 
 using namespace std;
 
@@ -12,47 +14,36 @@ using namespace std;
     getMin() -- Retrieve the minimum element in the stack.
 
 */
+struct Node{
+	int val;
+	Node *next;
+}
 class MinStack {
 public:
-    
     void push(int x) {
-        list.push_front(x);
-        if(*itr_min > x || itr_min == NULL){
-            itr_min = list.begin();
-        }
     }
 
     void pop() {
-        if(itr_min == list.begin()){
-            for(list<int>::iterator itr;itr 1= list.end();itr++){
-                if(itr == list.begin()){
-                    itr_min = NULL;
-                    continue;
-                }
-                if(itr_min == NULL){
-                    itr_min = itr;
-                }else if(*itr_min > *itr){
-                   itr_min = itr; 
-                }
-            }
-        }
-        list.pop_front(x);
     }
 
     int top() {
-        return list.front();
+        return ls.front();
     }
 
     int getMin() {
         return *itr_min;
     }
 private:
-   list<int> list = new list();
-   list<int>::iterator itr_min=list.begin();
+   list<int> ls;
+   list<int>::iterator itr_min;
 };
 int main(){
-
     cout<<"min stack"<<endl;
+    MinStack ms;
+    for(int i=0;i<10;i++){
+        ms.push(i);
+    }
+    cout<<ms.getMin()<<endl;
 
     return 0;
 }
