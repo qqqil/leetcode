@@ -6,6 +6,7 @@
 // Forward declaration of guess API.
 // @param num, your guess
 // @return -1 if my number is lower, 1 if my number is higher, otherwise return 0
+// complexity:time(logN)
 int guess(int num);
 
 class Solution {
