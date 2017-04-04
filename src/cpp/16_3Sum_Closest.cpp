@@ -1,5 +1,9 @@
 #include <stdlib.h>
+#include <cstddef>
+#include <algorithm>
+#include <vector>
 
+using namespace std;
 //
 // Created by andy on 17-2-22.
 //
